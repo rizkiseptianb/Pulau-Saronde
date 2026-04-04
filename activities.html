@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivitas & Pengalaman - Pulau Saronde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Tombol Trigger Menu -->
+<div class="menu-btn" id="menuBtn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- Overlay Navigasi -->
+<nav class="nav-overlay" id="navOverlay">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">1. Halaman Utama</a></li>
+            <li><a href="destinasi.html">2. Destinasi</a></li>
+            <li><a href="activities.html">3. Aktivitas & Pengalaman</a></li>
+            <li><a href="culture.html">4. Budaya & Warisan</a></li>
+            <li><a href="kuliner.html">5. Panduan Kuliner</a></li>
+            <li><a href="planner.html">6. Perencana Perjalanan</a></li>
+            <li><a href="#">7. Itinerari Inspirasi</a></li>
+            <li><a href="#">8. Akomodasi</a></li>
+            <li><a href="#">9. Keberlanjutan & Konservasi</a></li>
+            <li><a href="#">10. Pusat Bantuan & Kontak</a></li>
+            <li><a href="#">11. Form Pemesanan</a></li>
+            <li><a href="#">12. Galeri Media</a></li>
+            <li><a href="#">13. Testimoni & Cerita Wisatawan</a></li>
+            <li><a href="#">14. Tentang Kami & Kebijakan</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Header Section -->
+    <header class="page-header">
+        <div class="container">
+            <a href="index.html" class="back-btn"><i class="fas fa-chevron-left"></i> Kembali</a>
+            <h1>Things to Do</h1>
+            <p>Temukan pengalaman tak terlupakan sesuai gaya liburan Anda.</p>
+        </div>
+    </header>
+
+    <!-- 1. Filter Minat Khusus -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" onclick="filterSelection('all')">
+                    <i class="fas fa-th-large"></i> Semua
+                </button>
+                <button class="filter-btn" onclick="filterSelection('adventure')">
+                    <i class="fas fa-mountain"></i> Petualangan
+                </button>
+                <button class="filter-btn" onclick="filterSelection('family')">
+                    <i class="fas fa-child"></i> Keluarga
+                </button>
+                <button class="filter-btn" onclick="filterSelection('romantic')">
+                    <i class="fas fa-heart"></i> Romantis
+                </button>
+                <button class="filter-btn" onclick="filterSelection('nomad')">
+                    <i class="fas fa-laptop"></i> Digital Nomad
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Aktivitas Grid -->
+    <section class="activities-grid">
+        <div class="container">
+            <div class="row" id="activityContainer">
+                
+                <!-- Adventure 1 -->
+                <div class="activity-card adventure">
+                    <div class="card-inner">
+                        <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=600&q=80" alt="Snorkeling">
+                        <div class="badge difficulty-hard">Sedang</div>
+                        <div class="card-content">
+                            <h3>Snorkeling di Taman Laut Saronde</h3>
+                            <p>Jelajahi terumbu karang warna-warni dan berenang bersama penyu lokal.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-clock"></i> 08:00 - 11:00</span>
+                                <button class="btn-sm">Pesan Panduan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 1 -->
+                <div class="activity-card family">
+                    <div class="card-inner">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Picnic">
+                        <div class="badge info-badge">Akses Kursi Roda</div>
+                        <div class="card-content">
+                            <h3>Piknik Keluarga di Pasir Putih</h3>
+                            <p>Area teduh dengan ombak tenang, sangat aman untuk anak-anak bermain pasir.</p>
+                            <div class="card-meta">
+                                <span><i class="fas fa-users"></i> Semua Usia</span>
+                                <button class="btn-sm">Lihat Rute</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Romantic 1 -->
+                <div class="activity-card romantic">
+                    <div class="card-inner">
+                        <img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=600&q=80" alt="Dinner">
+                        <div class="badge romantic-badge">Privat</div>
+                        <div class="card-content">
+                            <h3>Private Beach Dinner</h3>
+                            <p>Makan malam romantis di bawah bintang dengan iringan debu ombak.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-moon"></i> 19:00 - Selesai</span>
+                                <button class="btn-sm">Booking</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nomad 1 -->
+                <div class="activity-card nomad">
+                    <div class="card-inner">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&q=80" alt="Work">
+                        <div class="badge wifi-badge">WiFi 50Mbps</div>
+                        <div class="card-content">
+                            <h3>Beachside Co-working</h3>
+                            <p>Bekerja remote dengan pemandangan laut toska dan fasilitas stop kontak.</p>
+                            <div class="card-meta">
+                                <span><i class="fas fa-plug"></i> Power Station</span>
+                                <button class="btn-sm">Cek Lokasi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tambahkan Item Lainnya Sesuai Kategori -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Panduan Musiman -->
+    <section class="seasonal-guide bg-light">
+        <div class="container">
+            <h2 class="section-title">Panduan Musiman</h2>
+            <div class="seasonal-container">
+                <!-- Musim Kemarau -->
+                <div class="season-card dry">
+                    <div class="season-header">
+                        <i class="fas fa-sun"></i>
+                        <h3>Musim Kemarau</h3>
+                        <span>April - Oktober</span>
+                    </div>
+                    <div class="season-body">
+                        <h4>Aktivitas Terbaik:</h4>
+                        <ul>
+                            <li>Island Hopping & Diving</li>
+                            <li>Camping & Stargazing</li>
+                        </ul>
+                        <div class="tips-box">
+                            <strong>Tips:</strong> Gunakan sunscreen & bawa air minum ekstra.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Musim Hujan -->
+                <div class="season-card wet">
+                    <div class="season-header">
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        <h3>Musim Hujan</h3>
+                        <span>November - Maret</span>
+                    </div>
+                    <div class="season-body">
+                        <h4>Aktivitas Terbaik:</h4>
+                        <ul>
+                            <li>Wisata Kuliner Gorontalo</li>
+                            <li>Spa & Relaksasi Indoor</li>
+                        </ul>
+                        <div class="tips-box">
+                            <strong>Tips:</strong> Sedia jas hujan & pantau jadwal kapal.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Khusus -->
+                <div class="season-card event">
+                    <div class="season-header">
+                        <i class="fas fa-calendar-star"></i>
+                        <h3>Musim Event</h3>
+                        <span>Variatif</span>
+                    </div>
+                    <div class="season-body">
+                        <h4>Aktivitas Terbaik:</h4>
+                        <ul>
+                            <li>Festival Saronde</li>
+                            <li>Atraksi Budaya Lokal</li>
+                        </ul>
+                        <div class="tips-box">
+                            <strong>Tips:</strong> Booking resort 3 bulan sebelumnya.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="simple-footer">
+        <p>&copy; 2026 Saronde Experience. All Rights Reserved.</p>
+    </footer>
+
+    <script src="activities.js"></script>
+</body>
+</html>

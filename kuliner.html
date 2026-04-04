@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Kuliner - Pulau Saronde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Tombol Trigger Menu -->
+<div class="menu-btn" id="menuBtn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- Overlay Navigasi -->
+<nav class="nav-overlay" id="navOverlay">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">1. Halaman Utama</a></li>
+            <li><a href="destinasi.html">2. Destinasi</a></li>
+            <li><a href="activities.html">3. Aktivitas & Pengalaman</a></li>
+            <li><a href="culture.html">4. Budaya & Warisan</a></li>
+            <li><a href="kuliner.html">5. Panduan Kuliner</a></li>
+            <li><a href="planner.html">6. Perencana Perjalanan</a></li>
+            <li><a href="#">7. Itinerari Inspirasi</a></li>
+            <li><a href="#">8. Akomodasi</a></li>
+            <li><a href="#">9. Keberlanjutan & Konservasi</a></li>
+            <li><a href="#">10. Pusat Bantuan & Kontak</a></li>
+            <li><a href="#">11. Form Pemesanan</a></li>
+            <li><a href="#">12. Galeri Media</a></li>
+            <li><a href="#">13. Testimoni & Cerita Wisatawan</a></li>
+            <li><a href="#">14. Tentang Kami & Kebijakan</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Hero Kuliner -->
+    <section class="hero-culinary">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="sub-title">Cita Rasa Gorontalo</span>
+            <h1>Petualangan Kuliner <br><span class="text-yellow">Pesisir Saronde</span></h1>
+            <p>Dari pedasnya Rica hingga segarnya Binte Biluhuta, temukan harmoni rempah di setiap suapan.</p>
+            <a href="#must-eat" class="btn-discover">Mulai Menjelajah</a>
+        </div>
+    </section>
+
+    <!-- 1. Hidangan Wajib Coba -->
+    <section id="must-eat" class="section">
+        <div class="container">
+            <h2 class="section-title">Hidangan Wajib Coba</h2>
+            <div class="dish-grid">
+                <!-- Makanan 1 -->
+                <div class="dish-card">
+                    <div class="dish-img">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Binte Biluhuta">
+                        <div class="dish-overlay">
+                            <span class="spicy-level">🌶️🌶️</span>
+                        </div>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Binte Biluhuta <small>(Sup Jagung)</small></h3>
+                        <p class="history">Ikon kuliner Gorontalo yang melambangkan persatuan antar kerajaan melalui jagung dan parutan kelapa.</p>
+                        <div class="dish-info">
+                            <span><i class="fas fa-utensils"></i> Jagung, Udang, Kelapa</span>
+                            <span><i class="fas fa-grin-tongue-wink"></i> Segar, Gurih, Asam</span>
+                        </div>
+                        <div class="drink-rec">
+                            <i class="fas fa-glass-whiskey"></i> Rekomendasi: Es Teh Manis
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Makanan 2 -->
+                <div class="dish-card">
+                    <div class="dish-img">
+                        <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd679?auto=format&fit=crop&w=600&q=80" alt="Ikan Bakar Rica">
+                        <div class="dish-overlay">
+                            <span class="spicy-level">🌶️🌶️🌶️🌶️🌶️</span>
+                        </div>
+                    </div>
+                    <div class="dish-body">
+                        <h3>Ikan Bakar Rica <small>(Spicy Grilled Fish)</small></h3>
+                        <p class="history">Ikan laut segar yang dibakar dengan olesan bumbu rica-rica pedas khas pesisir utara.</p>
+                        <div class="dish-info">
+                            <span><i class="fas fa-utensils"></i> Ikan Laut, Cabai, Jahe</span>
+                            <span><i class="fas fa-grin-tongue-wink"></i> Sangat Pedas, Smokey</span>
+                        </div>
+                        <div class="drink-rec">
+                            <i class="fas fa-cocktail"></i> Rekomendasi: Kelapa Muda
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Direktori Tempat Makan -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Cari Tempat Makan</h2>
+            
+            <!-- Filter Bar -->
+            <div class="filter-group">
+                <button class="filter-btn active" onclick="filterPlaces('all')">Semua</button>
+                <button class="filter-btn" onclick="filterPlaces('street')"><i class="fas fa-motorcycle"></i> Street Food</button>
+                <button class="filter-btn" onclick="filterPlaces('family')"><i class="fas fa-users"></i> Rumah Makan</button>
+                <button class="filter-btn" onclick="filterPlaces('premium')"><i class="fas fa-crown"></i> Premium</button>
+            </div>
+
+            <div class="places-grid" id="placesContainer">
+                <!-- Place 1 -->
+                <div class="place-card family">
+                    <div class="place-tag">Rumah Makan</div>
+                    <div class="place-content">
+                        <h4>RM Pesisir Saronde</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ <span>(4.8)</span></div>
+                        <p>Highlight: Paket Ikan Bakar & Sambal Dabu-Dabu.</p>
+                        <div class="place-meta">
+                            <span><i class="fas fa-dollar-sign"></i>$ - $$</span>
+                            <span><i class="fas fa-clock"></i> 09:00 - 21:00</span>
+                        </div>
+                        <a href="#" class="btn-maps"><i class="fas fa-map-marked-alt"></i> Petunjuk Jalan</a>
+                    </div>
+                </div>
+                <!-- Place 2 -->
+                <div class="place-card street">
+                    <div class="place-tag">Street Food</div>
+                    <div class="place-content">
+                        <h4>Sate Tuna Kwandang</h4>
+                        <div class="rating">⭐⭐⭐⭐ <span>(4.5)</span></div>
+                        <p>Highlight: Sate Tuna tusuk besar bumbu kacang.</p>
+                        <div class="place-meta">
+                            <span><i class="fas fa-dollar-sign"></i>$</span>
+                            <span><i class="fas fa-clock"></i> 16:00 - 23:00</span>
+                        </div>
+                        <a href="#" class="btn-maps"><i class="fas fa-map-marked-alt"></i> Petunjuk Jalan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Pasar & Jajanan -->
+    <section class="section">
+        <div class="container">
+            <div class="market-layout">
+                <div class="market-info">
+                    <h2 class="section-title left">Pasar Tradisional</h2>
+                    <div class="market-card">
+                        <i class="fas fa-store"></i>
+                        <div>
+                            <h4>Pasar Ikan Kwandang</h4>
+                            <p>Pusat tangkapan segar langsung dari nelayan. Datanglah pukul 05:00 pagi!</p>
+                        </div>
+                    </div>
+                    <div class="tips-box">
+                        <h5><i class="fas fa-lightbulb"></i> Tips Berbelanja:</h5>
+                        <ul>
+                            <li>Boleh menawar secara sopan (20-30%).</li>
+                            <li>Bawa uang tunai pecahan kecil.</li>
+                            <li>Cicipi jajanan "Kue Sabongi" yang dijual hangat.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="snack-gallery">
+                    <h3 class="gallery-title">Jajanan Khas</h3>
+                    <div class="snack-grid">
+                        <div class="snack-item">
+                            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=300&q=80" alt="Snack">
+                            <div class="snack-desc">
+                                <h6>Kue Sabongi</h6>
+                                <p>Pisang & Singkong</p>
+                            </div>
+                        </div>
+                        <div class="snack-item">
+                            <img src="https://images.unsplash.com/photo-1511910849309-0dffb8785146?auto=format&fit=crop&w=300&q=80" alt="Snack">
+                            <div class="snack-desc">
+                                <h6>Lalampa</h6>
+                                <p>Ketan Isi Ikan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="culinary-footer">
+        <p>&copy; 2026 Rasa Saronde - Gorontalo. Nikmati Kelezatannya!</p>
+    </footer>
+
+    <script src="kuliner.js"></script>
+</body>
+</html>

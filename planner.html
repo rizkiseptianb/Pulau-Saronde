@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perencana Perjalanan - Pulau Saronde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Tombol Trigger Menu -->
+<div class="menu-btn" id="menuBtn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- Overlay Navigasi -->
+<nav class="nav-overlay" id="navOverlay">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">1. Halaman Utama</a></li>
+            <li><a href="destinasi.html">2. Destinasi</a></li>
+            <li><a href="activities.html">3. Aktivitas & Pengalaman</a></li>
+            <li><a href="culture.html">4. Budaya & Warisan</a></li>
+            <li><a href="kuliner.html">5. Panduan Kuliner</a></li>
+            <li><a href="planner.html">6. Perencana Perjalanan</a></li>
+            <li><a href="#">7. Itinerari Inspirasi</a></li>
+            <li><a href="#">8. Akomodasi</a></li>
+            <li><a href="#">9. Keberlanjutan & Konservasi</a></li>
+            <li><a href="#">10. Pusat Bantuan & Kontak</a></li>
+            <li><a href="#">11. Form Pemesanan</a></li>
+            <li><a href="#">12. Galeri Media</a></li>
+            <li><a href="#">13. Testimoni & Cerita Wisatawan</a></li>
+            <li><a href="#">14. Tentang Kami & Kebijakan</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Header -->
+    <header class="planner-header">
+        <div class="container">
+            <h1>Rencanakan Perjalanan Anda</h1>
+            <p>Informasi lengkap mengenai dokumen, transportasi, dan konektivitas menuju Pulau Saronde.</p>
+        </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <section class="tab-section">
+        <div class="container">
+            <div class="tab-menu shadow">
+                <button class="tab-btn active" onclick="openTab(event, 'visa')">
+                    <i class="fas fa-passport"></i> <span>Dokumen & Visa</span>
+                </button>
+                <button class="tab-btn" onclick="openTab(event, 'transport')">
+                    <i class="fas fa-plane"></i> <span>Transportasi</span>
+                </button>
+                <button class="tab-btn" onclick="openTab(event, 'connectivity')">
+                    <i class="fas fa-wallet"></i> <span>Uang & Koneksi</span>
+                </button>
+            </div>
+
+            <!-- TAB 1: VISA & ENTRY -->
+            <div id="visa" class="tab-content active">
+                <div class="planner-grid">
+                    <div class="card visa-checker">
+                        <h3><i class="fas fa-globe"></i> Visa Checker</h3>
+                        <p>Pilih asal negara Anda untuk mengecek syarat masuk ke Indonesia:</p>
+                        <select id="countrySelect" onchange="checkVisa()">
+                            <option value="">-- Pilih Negara --</option>
+                            <option value="domestic">Indonesia (Domestik)</option>
+                            <option value="free">Singapura, Malaysia, Thailand</option>
+                            <option value="voa">Australia, USA, Uni Eropa</option>
+                            <option value="required">Negara Lainnya</option>
+                        </select>
+                        <div id="visaResult" class="result-box">
+                            Silakan pilih negara untuk melihat informasi.
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3><i class="fas fa-file-alt"></i> Dokumen Wajib</h3>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check-circle"></i> Paspor (Masa berlaku min. 6 bulan)</li>
+                            <li><i class="fas fa-check-circle"></i> Tiket Pulang-Pergi (Confirmed)</li>
+                            <li><i class="fas fa-check-circle"></i> Asuransi Perjalanan (Disarankan)</li>
+                            <li><i class="fas fa-check-circle"></i> Aplikasi SatuSehat (Vaksinasi)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: TRANSPORTATION -->
+            <div id="transport" class="tab-content">
+                <div class="planner-grid">
+                    <div class="card">
+                        <h3><i class="fas fa-plane-arrival"></i> Akses Udara</h3>
+                        <p><strong>Bandara Jalaluddin (GTO)</strong> adalah pintu masuk utama.</p>
+                        <div class="info-item">
+                            <i class="fas fa-taxi"></i>
+                            <div>
+                                <h4>Taksi & Shuttle</h4>
+                                <p>Tersedia taksi bandara resmi ke pusat kota (1 jam) atau langsung ke Kwandang.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3><i class="fas fa-car"></i> Transportasi Lokal</h3>
+                        <div class="transport-options">
+                            <div class="option">
+                                <span>Gojek / Grab</span>
+                                <p>Sangat aktif di Kota Gorontalo. Praktis dan harga transparan.</p>
+                            </div>
+                            <div class="option">
+                                <span>Sewa Mobil</span>
+                                <p>IDR 500k - 700k / hari (Termasuk sopir & BBM).</p>
+                            </div>
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i> Gunakan selalu transportasi resmi atau aplikasi berlisensi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: MONEY & CONNECTIVITY -->
+            <div id="connectivity" class="tab-content">
+                <div class="planner-grid">
+                    <div class="card">
+                        <h3><i class="fas fa-coins"></i> Mata Uang & Pembayaran</h3>
+                        <p class="currency-info">Mata uang resmi: <strong>Rupiah (IDR)</strong></p>
+                        <div class="payment-methods">
+                            <span><i class="fas fa-credit-card"></i> Visa/Mastercard</span>
+                            <span><i class="fas fa-qrcode"></i> QRIS (Gopay/OVO)</span>
+                        </div>
+                        <p><small>*Sediakan uang tunai untuk transaksi di pulau kecil atau pasar tradisional.</small></p>
+                    </div>
+
+                    <div class="card">
+                        <h3><i class="fas fa-wifi"></i> Koneksi & SIM Card</h3>
+                        <p>Kode Negara: <strong>+62</strong></p>
+                        <div class="provider-list">
+                            <span class="badge blue">Telkomsel</span>
+                            <span class="badge yellow">XL Axiata</span>
+                        </div>
+                        <p>SIM Card & eSIM tersedia di Bandara Jalaluddin atau gerai seluler lokal dengan harga paket mulai IDR 50.000.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="planner-footer">
+        <p>&copy; 2026 Wonderful Saronde - Perencana Perjalanan Resmi.</p>
+    </footer>
+
+    <script src="planner.js"></script>
+</body>
+</html>
