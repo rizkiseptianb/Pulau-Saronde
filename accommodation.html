@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akomodasi - Pulau Saronde Gorontalo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Tombol Trigger Menu -->
+<div class="menu-btn" id="menuBtn">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- Overlay Navigasi -->
+<nav class="nav-overlay" id="navOverlay">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">1. Halaman Utama</a></li>
+            <li><a href="destinasi.html">2. Destinasi</a></li>
+            <li><a href="#">3. Aktivitas & Pengalaman</a></li>
+            <li><a href="#">4. Budaya & Warisan</a></li>
+            <li><a href="#">5. Panduan Kuliner</a></li>
+            <li><a href="#">6. Perencana Perjalanan</a></li>
+            <li><a href="#">7. Itinerari Inspirasi</a></li>
+            <li><a href="#">8. Akomodasi</a></li>
+            <li><a href="#">9. Keberlanjutan & Konservasi</a></li>
+            <li><a href="#">10. Pusat Bantuan & Kontak</a></li>
+            <li><a href="#">11. Form Pemesanan</a></li>
+            <li><a href="#">12. Galeri Media</a></li>
+            <li><a href="#">13. Testimoni & Cerita Wisatawan</a></li>
+            <li><a href="#">14. Tentang Kami & Kebijakan</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero-stay">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="reveal">Temukan Kenyamanan di <span class="text-blue">Cakrawala Saronde</span></h1>
+            <p class="reveal">Dari resort mewah di atas air hingga kehangatan homestay lokal.</p>
+        </div>
+    </header>
+
+    <!-- 1. Jenis Penginapan (Categories) -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Pilih Pengalaman Menginap Anda</h2>
+            <div class="category-grid">
+                <div class="cat-card reveal">
+                    <i class="fas fa-hotel cat-icon"></i>
+                    <h3>Luxury Resorts</h3>
+                    <p>Fasilitas bintang 5, spa, dan kolam renang pribadi dengan pemandangan laut lepas.</p>
+                </div>
+                <div class="cat-card reveal">
+                    <i class="fas fa-concierge-bell cat-icon"></i>
+                    <h3>Boutique Hotels</h3>
+                    <p>Desain unik bertema budaya lokal dengan pelayanan yang sangat personal.</p>
+                </div>
+                <div class="cat-card reveal">
+                    <i class="fas fa-home cat-icon"></i>
+                    <h3>Homestay & Lokal</h3>
+                    <p>Rasakan kehangatan keluarga lokal dan hidangan otentik khas Gorontalo.</p>
+                </div>
+                <div class="cat-card reveal">
+                    <i class="fas fa-bed cat-icon"></i>
+                    <h3>Opsi Lainnya</h3>
+                    <p>Hostel untuk backpacker, villa grup, dan hotel bisnis di pusat kota.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Filter & Search -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="filter-wrapper shadow">
+                <div class="filter-group">
+                    <label><i class="fas fa-filter"></i> Filter Jenis:</label>
+                    <select id="typeFilter" onchange="filterAccommodations()">
+                        <option value="all">Semua Jenis</option>
+                        <option value="resort">Resort</option>
+                        <option value="eco">Eco-Friendly</option>
+                        <option value="homestay">Homestay</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label><i class="fas fa-tag"></i> Harga:</label>
+                    <select>
+                        <option>Semua Harga</option>
+                        <option>Termurah</option>
+                        <option>Mewah</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Accommodation Cards -->
+            <div class="stay-grid" id="stayContainer">
+                <!-- Card 1: Luxury/Eco -->
+                <div class="stay-card resort eco reveal" data-type="resort">
+                    <div class="stay-img">
+                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80" alt="Resort">
+                        <span class="badge eco-badge"><i class="fas fa-leaf"></i> Eco-Friendly</span>
+                    </div>
+                    <div class="stay-info">
+                        <div class="stay-header">
+                            <h3>Saronde Overwater Villas</h3>
+                            <span class="price">Mulai Rp 2.5jt</span>
+                        </div>
+                        <p class="rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p class="desc">Villa mewah di atas air dengan panel surya dan sistem daur ulang air mandiri.</p>
+                        <div class="stay-footer">
+                            <button class="btn-detail">Lihat Detail</button>
+                            <a href="#" class="btn-book">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Homestay -->
+                <div class="stay-card homestay reveal" data-type="homestay">
+                    <div class="stay-img">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Homestay">
+                    </div>
+                    <div class="stay-info">
+                        <div class="stay-header">
+                            <h3>Pondok Desa Ponelo</h3>
+                            <span class="price">Mulai Rp 350rb</span>
+                        </div>
+                        <p class="rating">⭐⭐⭐⭐ (4.5)</p>
+                        <p class="desc">Suasana pedesaan yang asri dengan akses langsung ke kehidupan nelayan lokal.</p>
+                        <div class="stay-footer">
+                            <button class="btn-detail">Lihat Detail</button>
+                            <a href="#" class="btn-book">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Eco-Friendly Info -->
+    <section class="section eco-section">
+        <div class="container">
+            <div class="eco-content reveal">
+                <span class="green-label">Komitmen Kami</span>
+                <h2>Menginap dengan Jejak Karbon Minimal</h2>
+                <p>Kami bekerja sama dengan akomodasi yang memprioritaskan keberlanjutan melalui penggunaan material bambu, energi surya, dan pemberdayaan warga lokal.</p>
+                <div class="eco-features">
+                    <span><i class="fas fa-sun"></i> Energi Surya</span>
+                    <span><i class="fas fa-tint-slash"></i> Hemat Air</span>
+                    <span><i class="fas fa-recycle"></i> Zero Plastic</span>
+                </div>
+                <a href="sustainability.html" class="link-more">Pelajari Program Konservasi Kami <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Map Placeholder -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Peta Lokasi Penginapan</h2>
+            <div class="map-dummy reveal">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Peta Interaktif Sedang Dimuat...</p>
+                <span>(Lokasi strategis di sekitar Pulau Saronde & Mohinggito)</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-stay">
+        <p>&copy; 2026 Wonderful Saronde - Gorontalo Hospitality.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
